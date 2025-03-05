@@ -38,3 +38,4 @@ OR	   wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.84/bin/apache-tomcat-9.
 	d. yum install java-1.8.0-openjdk-devel
 	e. "/opt/tomcat/bin/startup.sh" and "/opt/tomcat/bin/shutdown.sh" are configuration files for Tomcat
 	f. Verify from browser using "IP:8080"
+	  ```
