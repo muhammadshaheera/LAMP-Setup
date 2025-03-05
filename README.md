@@ -6,24 +6,25 @@ Steps for LAMP Setup
 1. Install Linux(CentOS or RHEL) using VMWare Workstation
 
 2. Install Apache by running following commands in CLI
-	a. Switch to root user
-	b. Install Apache: 
-``` yum install httpd ```
-	c. Stop and disable Firewall: 
-```systemctl stop firewalld``` ```systemctl disable firewalld```
-	d. Start and enable Apache: ```systemctl start httpd``` ```systemctl enable httpd.service```
-	e. Check your IP using "ip a" and goto browser and access that IP with port 80 and verify by "IP:80"
+	a. Switch to root user ```sudo -i```
+	b. Install Apache ```yum install httpd```
+	c. Stop and disable Firewall using ```systemctl stop firewalld``` and ```systemctl disable firewalld```
+	d. Start and enable Apache service using ```systemctl start httpd``` and ```systemctl enable httpd.service```
+	e. Check your IP using ```ip a``` and then goto browser and access that IP with port 80 and verify
 
 4. Install MariaDB
-	a. yum install mariadb-server
-	b. systemctl start mariadb
-	c. systemctl enable mariadb.service
-	d. Use "mysql_secure_installation" to setup credentials for MariaDB
-	e. Use "mysql" to goto DB and create user by "GRANT ALL ON example_database.* TO 'test'@'localhost' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;" and "FLUSH PRIVILEGES;"
+	a. Install MariaDB ```yum install mariadb-server```
+	b. Start and enable MariaDB service using ```systemctl start mariadb``` and ```systemctl enable mariadb.service```
+	c. Use ```mysql_secure_installation``` to setup credentials for MariaDB
+	d. Use ```mysql``` to goto DB
+	e. Create a new user by:
+```
+
+```
 	f. Check "SHOW DATABASES;", "CREATE DATABASE NEW_DB;", "USE DATABASE NEW_DB;", "DROP DATABASE NEW_DB;"
 	e. exit
 
-5. Install PHP
+6. Install PHP
 	a. yum install php php-mysql
 	b. systemctl restart httpd.service
 	c. Use "vi /var/www/html/info.php" and paste "<?php phpinfo(); ?>" and then verify by "IP/info.php"
