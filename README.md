@@ -8,12 +8,10 @@ Steps for LAMP Setup
 - Install Apache by running following commands in CLI
 a. Switch to root user
 b. 
-  ```
-yum install httpd
-  ```
-  ```
-systemctl stop firewalld
-  ```
+  ``` yum install httpd
+c.
+  ```systemctl stop firewalld
+
  d. systemctl disable firewalld
 	e. systemctl start httpd
 	f. systemctl enable httpd.service
