@@ -3,14 +3,14 @@
 
 Steps for LAMP Setup
 
-- Install Linux(CentOS or RHEL) using VMWare Workstation
+1. Install Linux(CentOS or RHEL) using VMWare Workstation
 
-- Install Apache by running following commands in CLI
-a. Switch to root user
-b. 
-  ``` yum install httpd
+2. Install Apache by running following commands in CLI
+	a. Switch to root user
+	b. Install Apache
+``` yum install httpd ```
 c.
-  ```systemctl stop firewalld
+  ```systemctl stop firewalld```
 
  d. systemctl disable firewalld
 	e. systemctl start httpd
