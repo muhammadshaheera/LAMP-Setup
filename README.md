@@ -3,18 +3,23 @@
 
 Steps for LAMP Setup
 
-1. Install Linux(CentOS or RHEL) using VMWare Workstation
+- Install Linux(CentOS or RHEL) using VMWare Workstation
 
-2. Install Apache by running following commands in CLI
-	a. Switch to root user
-	b. yum install httpd
-	c. systemctl stop firewalld
-	d. systemctl disable firewalld
+- Install Apache by running following commands in CLI
+a. Switch to root user
+b. 
+  ```
+yum install httpd
+  ```
+  ```
+systemctl stop firewalld
+  ```
+ d. systemctl disable firewalld
 	e. systemctl start httpd
 	f. systemctl enable httpd.service
 	g. Check your IP using "ip a" and goto browser and access that IP with port 80 and verify by "IP:80"
 
-3. Install MariaDB
+4. Install MariaDB
 	a. yum install mariadb-server
 	b. systemctl start mariadb
 	c. systemctl enable mariadb.service
@@ -23,7 +28,7 @@ Steps for LAMP Setup
 	f. Check "SHOW DATABASES;", "CREATE DATABASE NEW_DB;", "USE DATABASE NEW_DB;", "DROP DATABASE NEW_DB;"
 	e. exit
 
-4. Install PHP
+5. Install PHP
 	a. yum install php php-mysql
 	b. systemctl restart httpd.service
 	c. Use "vi /var/www/html/info.php" and paste "<?php phpinfo(); ?>" and then verify by "IP/info.php"
