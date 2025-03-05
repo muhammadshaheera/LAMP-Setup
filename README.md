@@ -7,15 +7,12 @@ Steps for LAMP Setup
 
 2. Install Apache by running following commands in CLI
 	a. Switch to root user
-	b. Install Apache
+	b. Install Apache: 
 ``` yum install httpd ```
-c.
-  ```systemctl stop firewalld```
-
- d. systemctl disable firewalld
-	e. systemctl start httpd
-	f. systemctl enable httpd.service
-	g. Check your IP using "ip a" and goto browser and access that IP with port 80 and verify by "IP:80"
+	c. Stop and disable Firewall: 
+```systemctl stop firewalld``` ```systemctl disable firewalld```
+	d. Start and enable Apache: ```systemctl start httpd``` ```systemctl enable httpd.service```
+	e. Check your IP using "ip a" and goto browser and access that IP with port 80 and verify by "IP:80"
 
 4. Install MariaDB
 	a. yum install mariadb-server
