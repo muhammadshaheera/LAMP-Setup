@@ -3,7 +3,7 @@
 
 Steps for LAMP Setup
 
-1. Install Linux(CentOS or RHEL) using VMWare Workstation
+1. Install Linux(CentOS or RHEL) using VMWare Workstation or VirtualBox
 
 2. Install Apache by running following commands in CLI
 	a. Switch to root user ```sudo -i```
@@ -23,10 +23,16 @@ CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
 FLUSH PRIVILEGES;
 ```
-f. Check "SHOW DATABASES;", "CREATE DATABASE NEW_DB;", "USE DATABASE NEW_DB;", "DROP DATABASE NEW_DB;"
-	e. exit
+f. Check and administer by:
+```
+CREATE DATABASE NEW_DB;
+SHOW DATABASES;
+USE DATABASE NEW_DB;
+DROP DATABASE NEW_DB;
+exit
+```
 
 6. Install PHP
-	a. yum install php php-mysql
-	b. systemctl restart httpd.service
-	c. Use "vi /var/www/html/info.php" and paste "<?php phpinfo(); ?>" and then verify by "IP/info.php"
+	a. ```yum install php php-mysql```
+	b. ```systemctl restart httpd.service```
+	c. Use ```vi /var/www/html/info.php``` and paste ```<?php phpinfo(); ?>``` and then verify by "IP/info.php"
